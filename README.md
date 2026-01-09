@@ -1,4 +1,4 @@
-# 💻 Portfolio Mickael Dijoux
+# 💻 Portfolio
 
 Portfolio moderne et ultra-rapide construit avec **React + Vite + Tailwind CSS + Framer Motion**.
 
