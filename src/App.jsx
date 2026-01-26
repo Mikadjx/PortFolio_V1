@@ -3,28 +3,67 @@ import { useState } from 'react';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
-      title: "MSL CIRCUIT",
-      role: "Développeur ASP.NET",
-      description: "Applications industrielles pour cartes électroniques automobile",
-      tech: ["ASP.NET", "C#", "SQL Server"],
-      color: "bg-electric"
+      title: "LULO STORE",
+      role: "Chef de Projet E-commerce",
+      description: "Site e-commerce PrestaShop de vente de t-shirts personnalisés sur le thème de l'Amérique latine avec système de paiement SumUp intégré",
+      tech: ["PrestaShop", "PHP", "SumUp API", "MySQL"],
+      color: "bg-sunset",
+      image: "/images/lulo_store.jpg",
+      details: {
+        tasks: [
+          "Création du cahier des charges",
+          "Réunions régulières avec le client",
+          "Intégration système de paiement SumUp",
+          "Personnalisation thème PrestaShop",
+          "Gestion catalogue produits personnalisés"
+        ]
+      }
     },
     {
-      title: "Hutchinson R&I",
+      title: "POMPIERS CALENDAR",
       role: "Développeur Full-Stack",
-      description: "Application de gestion des machines du centre innovation",
-      tech: ["JavaScript", "PHP", "MySQL"],
-      color: "bg-sunset"
+      description: "Application responsive de gestion de tournée de calendriers pour pompiers volontaires avec cartographie dynamique et statistiques en temps réel",
+      tech: ["ASP.NET MVC", "C#", "SQL Server", "Procédures stockées"],
+      color: "bg-electric",
+      image: "/images/logo_calendar.png",
+      details: {
+        tasks: [
+          "Gestion des adresses de Saint-Pryvé saint mesmin",
+          "Création et suivi des dons par adresse",
+          "Système de statuts (absent/refus/repassage ect..)",
+          "Secteurs géographiques pour pompiers",
+          "Espace admin (chef de centre & trésorier)",
+          "Carte dynamique interactive",
+          "Dashboard avec statistiques",
+          "Architecture avec procédures stockées"
+        ]
+      }
     },
     {
-      title: "Projet AFPA",
-      role: "Concepteur Développeur",
-      description: "Application web et mobile complète",
-      tech: ["Angular", "Symfony", "Bootstrap"],
-      color: "bg-electric"
+      title: "MATICES BAND",
+      role: "Développeur Full-Stack",
+      description: "Plateforme web complète pour groupe de rock avec gestion multimédia, espace membres et outils de collaboration musicale",
+      tech: ["Symfony", "PHP", "MySQL", "JavaScript"],
+      color: "bg-sunset",
+      image: "/images/matices-band.png",
+      details: {
+        tasks: [
+          "Présentation du groupe et contenu multimédia",
+          "Intégration vidéos et galerie photos",
+          "Formulaire de contact pour concerts",
+          "Espace personnel par musicien",
+          "Dépôt et partage de partitions",
+          "Système de sondages pour répertoire",
+          "Gestion du matériel musical",
+          "Gestion présences répétitions avec mails auto",
+          "Interface responsive mobile/desktop",
+          "Panel admin modulable"
+        ]
+      }
     }
   ];
 
@@ -34,7 +73,9 @@ function App() {
     { name: "SQL Server", level: 80 },
     { name: "JavaScript", level: 85 },
     { name: "PHP", level: 75 },
-    { name: "Symfony", level: 70 }
+    { name: "Symfony", level: 70 },
+    { name: "PrestaShop", level: 65 },
+    { name: "HTML & CSS", level: 90 }
   ];
 
   const containerVariants = {
@@ -67,6 +108,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <motion.div
+            
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-display font-bold text-electric"
             >
@@ -127,7 +169,6 @@ function App() {
             Développeur ASP.NET passionné, alternant chez MSL CIRCUIT.
             <br />
             Ex-cuisinier reconverti. Pompier volontaire.
-            
           </motion.p>
 
           <motion.div
@@ -189,30 +230,50 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ y: -10 }}
-                className="group relative"
+                className="group relative cursor-pointer"
+                onClick={() => setSelectedProject(project)}
               >
-                <div className="h-full bg-concrete/5 border-4 border-concrete/20 p-6 md:p-8 hover:border-electric transition-all">
-                  <div className={`w-12 h-12 md:w-16 md:h-16 ${project.color} mb-4 md:mb-6 group-hover:scale-110 transition-transform`}></div>
-                  
-                  <h3 className="text-xl md:text-2xl font-display font-bold mb-2 text-concrete">
-                    {project.title}
-                  </h3>
-                  <p className="text-electric font-display text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
-                    {project.role}
-                  </p>
-                  <p className="text-concrete/70 mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map(tech => (
-                      <span
-                        key={tech}
-                        className="px-2 md:px-3 py-1 bg-midnight border border-electric/30 text-electric text-xs font-display uppercase"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                <div className="h-full bg-concrete/5 border-4 border-concrete/20 hover:border-electric transition-all overflow-hidden">
+                  {/* Image du projet */}
+                  <div className="relative h-48 md:h-56 overflow-hidden">
+                    <motion.img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/50 to-transparent"></div>
+                    <div className={`absolute top-4 right-4 w-12 h-12 ${project.color}`}></div>
+                  </div>
+
+                  {/* Contenu */}
+                  <div className="p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-display font-bold mb-2 text-concrete">
+                      {project.title}
+                    </h3>
+                    <p className="text-electric font-display text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide">
+                      {project.role}
+                    </p>
+                    <p className="text-concrete/70 mb-4 md:mb-6 leading-relaxed text-sm md:text-base line-clamp-3">
+                      {project.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tech.map(tech => (
+                        <span
+                          key={tech}
+                          className="px-2 md:px-3 py-1 bg-midnight border border-electric/30 text-electric text-xs font-display uppercase"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex items-center gap-2 text-electric font-display text-sm uppercase group-hover:gap-4 transition-all">
+                      <span>Voir détails</span>
+                      <span className="group-hover:translate-x-2 transition-transform">→</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -220,6 +281,93 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-midnight/95 backdrop-blur-sm"
+          onClick={() => setSelectedProject(null)}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            onClick={(e) => e.stopPropagation()}
+            className="bg-midnight border-4 border-electric max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8 md:p-12"
+          >
+            <div className="flex justify-between items-start mb-6">
+              <div>
+                <h3 className="text-3xl md:text-5xl font-display font-bold text-electric mb-2">
+                  {selectedProject.title}
+                </h3>
+                <p className="text-sunset font-display uppercase text-sm md:text-base tracking-wide">
+                  {selectedProject.role}
+                </p>
+              </div>
+              <motion.button
+                whileHover={{ scale: 1.1, rotate: 90 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setSelectedProject(null)}
+                className="text-concrete hover:text-electric text-3xl font-display leading-none"
+              >
+                ×
+              </motion.button>
+            </div>
+
+            {/* Image agrandie dans la modal */}
+            <div className="mb-8 border-4 border-concrete/20 overflow-hidden">
+              <img 
+                src={selectedProject.image} 
+                alt={selectedProject.title}
+                className="w-full h-auto"
+              />
+            </div>
+
+            <p className="text-concrete/80 text-lg mb-8 leading-relaxed">
+              {selectedProject.description}
+            </p>
+
+            <div className="mb-8">
+              <h4 className="text-2xl font-display font-bold text-sunset mb-4 uppercase">
+                Technologies utilisées
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {selectedProject.tech.map(tech => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 bg-concrete/10 border-2 border-electric/30 text-electric font-display uppercase text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-2xl font-display font-bold text-sunset mb-4 uppercase">
+                Fonctionnalités & Réalisations
+              </h4>
+              <ul className="space-y-3">
+                {selectedProject.details.tasks.map((task, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    className="flex items-start gap-3 text-concrete/80"
+                  >
+                    <span className="text-electric text-xl mt-1">▹</span>
+                    <span>{task}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
 
       {/* Skills Section */}
       <section id="compétences" className="py-20 md:py-32 px-4 bg-concrete/5">
