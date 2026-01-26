@@ -1,4 +1,4 @@
-# 💻 Portfolio Mickael Dijoux
+# 💻 Portfolio
 
 Portfolio moderne et ultra-rapide construit avec **React + Vite + Tailwind CSS + Framer Motion**.
 
@@ -89,14 +89,6 @@ Le dossier `dist/` contient tous les fichiers optimisés et prêts à être dép
 ```bash
 # Installer gh-pages
 npm install -D gh-pages
-
-# Ajouter dans package.json:
-"homepage": "https://tonusername.github.io/portfolio",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-
 # Déployer
 npm run deploy
 ```
