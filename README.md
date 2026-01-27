@@ -229,5 +229,3 @@ Libre d'utilisation - Personnalise à ta guise ! 🎉
 
 **Fait avec ❤️ et beaucoup de ☕**
 
-
-HELLO
