@@ -4,6 +4,7 @@ import { useState } from 'react';
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showLivePreview, setShowLivePreview] = useState(false);
 
   const projects = [
     {
@@ -13,6 +14,7 @@ function App() {
       tech: ["PrestaShop", "PHP", "SumUp API", "MySQL"],
       color: "bg-sunset",
       image: "./images/lulo_store.jpg",
+      website: "https://lulo.fabdevlab.fr/",
       details: {
         tasks: [
           "Création du cahier des charges",
@@ -30,6 +32,7 @@ function App() {
       tech: ["ASP.NET MVC", "C#", "SQL Server", "Procédures stockées"],
       color: "bg-electric",
       image: "./images/logo_calendar.png",
+      website: null,
       details: {
         tasks: [
           "Gestion des adresses de Saint-Pryvé saint mesmin",
@@ -50,6 +53,7 @@ function App() {
       tech: ["Symfony", "PHP", "MySQL", "JavaScript"],
       color: "bg-sunset",
       image: "./images/matices-band.png",
+      website: "https://matices.pages.dev/",
       details: {
         tasks: [
           "Présentation du groupe et contenu multimédia",
@@ -289,7 +293,7 @@ function App() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-midnight/95 backdrop-blur-sm"
-          onClick={() => setSelectedProject(null)}
+          onClick={() => { setSelectedProject(null); setShowLivePreview(false); }}
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -310,20 +314,146 @@ function App() {
               <motion.button
                 whileHover={{ scale: 1.1, rotate: 90 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={() => setSelectedProject(null)}
+                onClick={() => { setSelectedProject(null); setShowLivePreview(false); }}
                 className="text-concrete hover:text-electric text-3xl font-display leading-none"
               >
                 ×
               </motion.button>
             </div>
 
-            {/* Image agrandie dans la modal */}
-            <div className="mb-8 border-4 border-concrete/20 overflow-hidden">
-              <img 
-                src={selectedProject.image} 
-                alt={selectedProject.title}
-                className="w-full h-auto"
-              />
+            {/* Live Preview Browser ou Image */}
+            <div className="mb-8">
+              {!showLivePreview ? (
+                <>
+                  {/* Image du projet */}
+                  <div className="border-4 border-concrete/20 overflow-hidden mb-4">
+                    <img
+                      src={selectedProject.image}
+                      alt={selectedProject.title}
+                      className="w-full h-auto"
+                    />
+                  </div>
+
+                  {/* Bouton Voir le site en live */}
+                  {selectedProject.website ? (
+                    <motion.button
+                      onClick={() => setShowLivePreview(true)}
+                      whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(0, 255, 148, 0.3)" }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full py-4 bg-electric/10 border-2 border-electric text-electric font-display uppercase tracking-wider flex items-center justify-center gap-3 hover:bg-electric hover:text-midnight transition-all group"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                      </svg>
+                      <span>Voir le site en live</span>
+                      <motion.span
+                        className="group-hover:translate-x-1 transition-transform"
+                        animate={{ x: [0, 5, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        →
+                      </motion.span>
+                    </motion.button>
+                  ) : (
+                    <div className="w-full py-4 bg-concrete/5 border-2 border-concrete/30 text-concrete/50 font-display uppercase tracking-wider flex items-center justify-center gap-3">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span>Site bientôt en ligne</span>
+                    </div>
+                  )}
+                </>
+              ) : (
+                /* Live Browser Preview */
+                <motion.div
+                  initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className="border-4 border-electric overflow-hidden rounded-lg"
+                >
+                  {/* Barre de navigation du navigateur */}
+                  <div className="bg-midnight border-b-2 border-electric/30 px-4 py-3 flex items-center gap-3">
+                    {/* Boutons de fenêtre */}
+                    <div className="flex gap-2">
+                      <motion.button
+                        onClick={() => setShowLivePreview(false)}
+                        whileHover={{ scale: 1.2 }}
+                        className="w-3 h-3 rounded-full bg-sunset hover:bg-sunset/80 transition-colors"
+                        title="Fermer le preview"
+                      />
+                      <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
+                      <motion.a
+                        href={selectedProject.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.2 }}
+                        className="w-3 h-3 rounded-full bg-electric hover:bg-electric/80 transition-colors block"
+                        title="Ouvrir dans un nouvel onglet"
+                      />
+                    </div>
+
+                    {/* Barre d'URL */}
+                    <div className="flex-1 bg-concrete/10 border border-concrete/20 rounded-full px-4 py-1.5 flex items-center gap-2">
+                      <svg className="w-4 h-4 text-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                      <span className="text-concrete/70 text-sm font-mono truncate">
+                        {selectedProject.website}
+                      </span>
+                    </div>
+
+                    {/* Bouton ouvrir dans nouvel onglet */}
+                    <motion.a
+                      href={selectedProject.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="text-concrete/50 hover:text-electric transition-colors"
+                      title="Ouvrir dans un nouvel onglet"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </motion.a>
+                  </div>
+
+                  {/* Iframe du site */}
+                  <div className="relative bg-white" style={{ height: '400px' }}>
+                    <iframe
+                      src={selectedProject.website}
+                      title={`Preview de ${selectedProject.title}`}
+                      className="w-full h-full border-0"
+                      loading="lazy"
+                    />
+                    {/* Overlay de chargement */}
+                    <motion.div
+                      initial={{ opacity: 1 }}
+                      animate={{ opacity: 0 }}
+                      transition={{ delay: 1, duration: 0.5 }}
+                      className="absolute inset-0 bg-midnight flex items-center justify-center pointer-events-none"
+                    >
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                        className="w-8 h-8 border-4 border-electric border-t-transparent rounded-full"
+                      />
+                    </motion.div>
+                  </div>
+
+                  {/* Bouton retour à l'image */}
+                  <motion.button
+                    onClick={() => setShowLivePreview(false)}
+                    whileHover={{ backgroundColor: "rgba(0, 255, 148, 0.1)" }}
+                    className="w-full py-3 bg-midnight border-t-2 border-electric/30 text-concrete/70 hover:text-electric font-display uppercase text-sm tracking-wider flex items-center justify-center gap-2 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Retour à la présentation
+                  </motion.button>
+                </motion.div>
+              )}
             </div>
 
             <p className="text-concrete/80 text-lg mb-8 leading-relaxed">
