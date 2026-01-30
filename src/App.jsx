@@ -13,7 +13,7 @@ function App() {
       description: "Site e-commerce PrestaShop de vente de t-shirts personnalisés sur le thème de l'Amérique latine avec système de paiement SumUp intégré",
       tech: ["PrestaShop", "PHP", "SumUp API", "MySQL"],
       color: "bg-sunset",
-      image: "./images/lulo_store.jpg",
+      image: "/images/lulo_store.jpg",
       website: "https://lulo.fabdevlab.fr/",
       details: {
         tasks: [
@@ -31,7 +31,7 @@ function App() {
       description: "Application responsive de gestion de tournée de calendriers pour pompiers volontaires avec cartographie dynamique et statistiques en temps réel",
       tech: ["ASP.NET MVC", "C#", "SQL Server", "Procédures stockées"],
       color: "bg-electric",
-      image: "./images/logo_calendar.png",
+      image: "/images/logo_calendar.png",
       website: null,
       details: {
         tasks: [
@@ -52,7 +52,7 @@ function App() {
       description: "Plateforme web complète pour groupe de rock avec gestion multimédia, espace membres et outils de collaboration musicale",
       tech: ["Symfony", "PHP", "MySQL", "JavaScript"],
       color: "bg-sunset",
-      image: "./images/matices-band.png",
+      image: "/images/matices-band.png",
       website: "https://matices.pages.dev/",
       details: {
         tasks: [
