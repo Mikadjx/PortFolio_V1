@@ -597,10 +597,10 @@ function App() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="mailto:dijoux_mickael@outlook.fr"
+              href="mailto:mickael.dijoux97@gmail.com"
               className="px-6 md:px-12 py-4 md:py-6 bg-electric text-midnight font-display font-bold text-base md:text-xl uppercase tracking-wider border-4 border-electric hover:bg-transparent hover:text-electric transition-all break-all"
             >
-              dijoux_mickael@outlook.fr
+              mickael.dijoux97@gmail.com
             </motion.a>
           </motion.div>
 
