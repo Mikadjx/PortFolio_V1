@@ -192,7 +192,7 @@ function App() {
             <motion.a
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255, 107, 53, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              href="mailto:dijoux_mickael@outlook.fr"
+              href="mailto:mickael.dijoux97@gmail.com"
               className="px-6 md:px-8 py-3 md:py-4 bg-transparent text-sunset font-display font-bold uppercase tracking-wider border-4 border-sunset hover:bg-sunset hover:text-midnight transition-all text-sm md:text-base"
             >
               Contact
