@@ -1,6 +1,6 @@
-# 💻 Portfolio
+# Portfolio
 
-🌐 **Site en ligne** : https://portfolio-v1-d5a.pages.dev/
+**Site en ligne** : https://portfolio-v1-d5a.pages.dev/
 
 Portfolio moderne et ultra-rapide construit avec **React + Vite + Tailwind CSS + Framer Motion**.
 
@@ -8,7 +8,7 @@ Portfolio moderne et ultra-rapide construit avec **React + Vite + Tailwind CSS +
 ![Vite](https://img.shields.io/badge/Vite-6.0-purple)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.4-cyan)
 
-## 🚀 Stack Technique
+## Stack Technique
 
 - **React 18.3** - Framework UI moderne
 - **Vite 6.0** - Build tool ultra-rapide (HMR instantané)
@@ -16,7 +16,7 @@ Portfolio moderne et ultra-rapide construit avec **React + Vite + Tailwind CSS +
 - **Framer Motion 11** - Animations fluides et performantes
 - **Google Fonts** - Space Mono + DM Sans
 
-## 📦 Installation & Lancement
+## Installation & Lancement
 
 ```bash
 # 1. Installer les dépendances
@@ -28,7 +28,7 @@ npm run dev
 # Le site s'ouvre sur http://localhost:5173
 ```
 
-## 🏗️ Build pour Production
+## Build pour Production
 
 ```bash
 # Créer le build optimisé
@@ -40,33 +40,33 @@ npm run preview
 
 Le dossier `dist/` contient tous les fichiers optimisés et prêts à être déployés.
 
-## 🎨 Design
+## Design
 
 **Style néo-brutaliste moderne** avec :
 
-- ✨ Palette de couleurs audacieuse
+- Palette de couleurs audacieuse
   - Electric Green: `#00FF94`
   - Sunset Orange: `#FF6B35`
   - Midnight Blue: `#0A0E27`
   - Concrete: `#E8E8E8`
   
-- 🎭 Typographie distinctive
+-  Typographie distinctive
   - Display: Space Mono (monospace)
   - Body: DM Sans (sans-serif)
   
-- 🎬 Animations fluides avec Framer Motion
+- Animations fluides avec Framer Motion
   - Fade in au scroll
   - Hover effects sophistiqués
   - Stagger animations
   - Smooth page transitions
   
-- 🎯 Design moderne
+-  Design moderne
   - Bordures épaisses et contrastes forts
   - Effet grain subtle pour la texture
   - Micro-interactions partout
   - 100% responsive (mobile first)
 
-## 🌐 Déploiement
+##  Déploiement
 
 ### Option 1: Netlify (Recommandé - Gratuit)
 
@@ -76,7 +76,7 @@ Le dossier `dist/` contient tous les fichiers optimisés et prêts à être dép
 4. Configure:
    - **Build command**: `npm run build`
    - **Publish directory**: `dist`
-5. Deploy! 🚀
+5. Deploy! 
 
 ### Option 2: Vercel (Gratuit)
 
@@ -84,7 +84,7 @@ Le dossier `dist/` contient tous les fichiers optimisés et prêts à être dép
 2. Va sur [vercel.com](https://vercel.com)
 3. "Import Project" → Sélectionne ton repo
 4. Vercel détecte automatiquement Vite
-5. Deploy! 🚀
+5. Deploy! 
 
 ### Option 3: GitHub Pages (Gratuit)
 
@@ -95,24 +95,24 @@ npm install -D gh-pages
 npm run deploy
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 Le portfolio est optimisé pour tous les écrans :
 
-- 📱 **Mobile** (< 768px): Layout empilé, navigation simplifiée
-- 💻 **Tablet** (768px - 1024px): Grid 2 colonnes
-- 🖥️ **Desktop** (> 1024px): Grid 3 colonnes, animations complètes
+- **Mobile** (< 768px): Layout empilé, navigation simplifiée
+- **Tablet** (768px - 1024px): Grid 2 colonnes
+- **Desktop** (> 1024px): Grid 3 colonnes, animations complètes
 
-## ⚡ Performance
+## Performance
 
-- ⚡ Vite garantit un démarrage instantané (< 1s)
-- 📦 Code splitting automatique
-- 🖼️ Lazy loading des animations
-- 🎨 CSS optimisé avec PurgeCSS
-- 📉 Bundle ultra-léger (~50KB gzippé)
-- 💨 Score Lighthouse: 95+
+- Vite garantit un démarrage instantané (< 1s)
+- Code splitting automatique
+- Lazy loading des animations
+- CSS optimisé avec PurgeCSS
+- Bundle ultra-léger (~50KB gzippé)
+- Score Lighthouse: 95+
 
-## 🎯 Personnalisation
+## Personnalisation
 
 ### Modifier les couleurs
 
@@ -167,24 +167,24 @@ portfolio/
 └── package.json          # Dépendances
 ```
 
-## 📝 Sections du Portfolio
+## Sections du Portfolio
 
 1. **Hero** - Intro avec titre animé et CTA
 2. **Projets** - Grid de projets avec hover effects
 3. **Compétences** - Barres de progression animées
 4. **Contact** - Email et liens sociaux
 
-## 🎭 Animations
+## Animations
 
 Utilise **Framer Motion** pour :
 
-- ✨ Fade in progressif au scroll
-- 🎯 Hover effects sur les cartes
-- 📊 Animations de barres de compétences
-- 🔄 Transitions de page fluides
-- 🎪 Stagger animations (décalage)
+- Fade in progressif au scroll
+- Hover effects sur les cartes
+- Animations de barres de compétences
+- Transitions de page fluides
+- Stagger animations (décalage)
 
-## 🐛 Dépannage
+## Dépannage
 
 **Problème**: `npm install` échoue
 ```bash
@@ -209,21 +209,21 @@ node --version  # Doit être >= 18
 # Mettre à jour Node si nécessaire
 ```
 
-## 📚 Documentation Utile
+## Documentation Utile
 
 - [React](https://react.dev)
 - [Vite](https://vitejs.dev)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Framer Motion](https://www.framer.com/motion)
 
-## 🤝 Contact
+## Contact
 
 **Mickael Dijoux**
-- 📧 Email: mickael.dijoux97@gmail.com
-- 💻 GitHub: [Mikadjx](https://github.com/Mikadjx)
-- 💼 LinkedIn: Mickael Dijoux
+- Email: mickael.dijoux97@gmail.com
+- GitHub: [Mikadjx](https://github.com/Mikadjx)
+- LinkedIn: Mickael Dijoux
 
-## 📄 Licence
+## Licence
 
 Libre d'utilisation - Personnalise à ta guise ! 🎉
 
