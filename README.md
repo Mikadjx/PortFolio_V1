@@ -225,7 +225,7 @@ node --version  # Doit être >= 18
 
 ## Licence
 
-Libre d'utilisation - Personnalise à ta guise ! 🎉
+Libre d'utilisation - Personnalise à ta guise ! 
 
 ---
 
