@@ -124,14 +124,14 @@ function App() {
   const experiences = [
     {
       company: 'MSL Circuit',
-      role: 'Développeur Full-Stack',
-      type: 'Alternance — Master ASI',
+      role: 'Développeur informatique',
+      type: 'Alternance — Mastère Manager en architecture et applications des systèmes d’information',
       period: '2024 — 2026',
       location: 'Orléans',
       current: true,
       tasks: [
         "Développement et maintenance d'applications web métier",
-        "Stack principale : ASP.NET MVC, SQL Server, Angular, jQuery",
+        "Stack principale : ASP.NET MVC, SQL Server(procedures stockées), jQuery",
         "Mise en place de pipelines CI/CD",
         "Tests unitaires et participation aux revues de code",
         "Travail en équipe avec méthode agile",
@@ -140,14 +140,14 @@ function App() {
     {
       company: 'Hutchinson',
       role: 'Développeur Web',
-      type: 'Alternance — Bachelor Dev Web',
-      period: '2022 — 2024',
+      type: 'Alternance — Bachelor concepteur développeur d’applications',
+      period: '2023 — 2024',
       location: 'Orléans',
       current: false,
       tasks: [
-        "Développement d'outils de suivi de production interne",
-        "Stack : ASP.NET MVC, SQL Server, jQuery",
-        "Maintenance et évolution d'applications industrielles",
+        "Développement d'outils de suivi et stockage de machine de production interne",
+        "Stack : ASP.NET MVC, Angular, postgreSQL",
+        "Maintenance et évolution d'applications existantes",
         "Analyse des besoins et rédaction de spécifications techniques",
       ],
     },
@@ -302,11 +302,6 @@ function App() {
           variants={staggerContainer}
           className="max-w-6xl mx-auto text-center relative z-10"
         >
-          <motion.div variants={fadeUp} className="mb-8">
-            <span className="inline-block px-6 py-2 bg-electric/10 border-2 border-electric text-electric font-display text-xs sm:text-sm uppercase tracking-widest">
-              Développeur Full-Stack — Disponible en CDI oct. 2026
-            </span>
-          </motion.div>
 
           <motion.h1
             variants={fadeUp}
@@ -395,7 +390,7 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
             {/* Récit */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -426,10 +421,10 @@ function App() {
                 Hutchinson et MSL Circuit sur des projets ASP.NET MVC en
                 environnement industriel, je cherche à m'engager dans un CDI
                 dès octobre 2026.
-              </p>
+              </p> */}
 
               {/* Centres d'intérêt */}
-              <div className="pt-4">
+              {/* <div className="pt-4">
                 <p className="font-display text-xs uppercase tracking-widest text-concrete/50 mb-4">
                   En dehors du code
                 </p>
@@ -449,7 +444,7 @@ function App() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Stats + infos pratiques */}
             <motion.div
@@ -477,7 +472,7 @@ function App() {
               </div>
 
               {/* Soft skills */}
-              <div className="p-6 border-2 border-electric/30 bg-electric/5">
+              {/* <div className="p-6 border-2 border-electric/30 bg-electric/5">
                 <p className="font-display text-xs uppercase tracking-widest text-electric mb-4">
                   Soft skills
                 </p>
@@ -497,10 +492,10 @@ function App() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Mobilité */}
-              <div className="p-6 border-2 border-sunset/30 bg-sunset/5">
+              {/* <div className="p-6 border-2 border-sunset/30 bg-sunset/5">
                 <p className="font-display text-xs uppercase tracking-widest text-sunset mb-4">
                   Disponibilité & mobilité
                 </p>
@@ -515,7 +510,7 @@ function App() {
                     <span className="text-sunset">▹</span> Permis B — Anglais basique
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
@@ -980,10 +975,10 @@ function App() {
             <h3 className="text-2xl md:text-3xl font-display font-bold mb-2 text-sunset">
               PARCOURS_ATYPIQUE
             </h3>
-            <p className="text-concrete/60 text-sm font-body mb-8 max-w-xl">
+            {/* <p className="text-concrete/60 text-sm font-body mb-8 max-w-xl">
               La cuisine m'a tout appris : rigueur, gestion du stress, esprit d'équipe, créativité.
               Le développement logiciel, c'est exactement la même chose — et c'est pour ça que ça me convient.
-            </p>
+            </p> */}
             <div className="grid grid-cols-3 gap-4 md:gap-8">
               {[
                 { value: '10', label: 'Ans en cuisine', sub: 'Avant la reconversion' },
@@ -1012,8 +1007,8 @@ function App() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl lg:text-8xl font-display font-bold mb-6 md:mb-8 leading-tight"
           >
-            <span className="text-outline text-electric">ON SE</span>{' '}
-            <span className="text-concrete">PARLE ?</span>
+            {/* <span className="text-outline text-electric">ON SE</span>{' '}
+            <span className="text-concrete">PARLE ?</span> */}
           </motion.h2>
 
           <motion.p
@@ -1108,11 +1103,11 @@ function App() {
                   href="tel:+33675291452"
                   className="block text-concrete/60 hover:text-electric transition-colors"
                 >
-                  06 75 29 14 52
+                  {/* 06 75 29 14 52 */}
                 </a>
               </div>
             </div>
-            <div>
+            {/* <div>
               <p className="font-display text-xs uppercase tracking-widest text-concrete/40 mb-4">
                 Disponibilité
               </p>
@@ -1120,7 +1115,7 @@ function App() {
               <p className="text-concrete/40 text-xs mt-1">
                 France · International · Télétravail
               </p>
-            </div>
+            </div> */}
           </div>
           <div className="border-t border-electric/10 pt-6 flex flex-wrap items-center justify-between gap-4">
             <p className="font-display text-concrete/30 text-xs">© 2026 MICKAEL DIJOUX</p>
