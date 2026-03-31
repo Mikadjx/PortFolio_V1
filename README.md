@@ -219,7 +219,7 @@ node --version  # Doit être >= 18
 ## 🤝 Contact
 
 **Mickael Dijoux**
-- 📧 Email: dijoux_mickael@outlook.fr
+- 📧 Email: mickael.dijoux97@gmail.com
 - 💻 GitHub: [Mikadjx](https://github.com/Mikadjx)
 - 💼 LinkedIn: Mickael Dijoux
 
