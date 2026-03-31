@@ -53,7 +53,7 @@ function App() {
       tech: ["Symfony", "PHP", "MySQL", "JavaScript"],
       color: "bg-sunset",
       image: "/images/matices-band.png",
-      website: "https://matices.pages.dev/",
+      website: "https://matices-project.pages.dev/",
       details: {
         tasks: [
           "Présentation du groupe et contenu multimédia",
