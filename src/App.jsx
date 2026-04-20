@@ -390,63 +390,70 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
             {/* Récit */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="space-y-6"
             >
               <p className="text-xl md:text-2xl text-concrete leading-relaxed font-body">
-                Pendant{' '}
-                <span className="text-electric font-bold">10 ans</span>, j'ai
-                travaillé comme cuisinier. À{' '}
-                <span className="text-electric font-bold">30 ans</span>, j'ai
-                décidé de tout changer.
+                Développeur{' '}
+                <span className="text-electric font-bold">Fullstack</span>{' '}
+                orienté web, avec une expertise en conception d'applications robustes et en gestion de bases de données.
               </p>
               <p className="text-lg text-concrete/80 leading-relaxed">
-                Bac scientifique en cours du soir, formation intensive au
-                développement web, Bachelor, et aujourd'hui en{' '}
-                <span className="text-sunset">Master ASI en alternance</span>.
-                Ce n'est pas une reconversion par défaut — c'est un choix
-                assumé.
+                Je conçois et développe des solutions complètes, de l'interface
+                utilisateur jusqu'au déploiement, en m'appuyant sur des stacks
+                telles que{' '}
+                <span className="text-sunset">ASP.NET MVC</span>,{' '}
+                <span className="text-sunset">Symfony</span> ou tout autre
+                environnement adapté aux besoins du projet.
               </p>
-              <p className="text-lg text-concrete/80 leading-relaxed">
-                Ces années en cuisine m'ont appris à travailler sous pression, à
-                m'organiser, à m'adapter. Des qualités que je retrouve chaque
-                jour dans le développement logiciel.
-              </p>
-              <p className="text-lg text-concrete/80 leading-relaxed">
-                Avec{' '}
-                <span className="text-electric">3 ans d'expérience</span> chez
-                Hutchinson et MSL Circuit sur des projets ASP.NET MVC en
-                environnement industriel, je cherche à m'engager dans un CDI
-                dès octobre 2026.
-              </p> */}
 
-              {/* Centres d'intérêt */}
-              {/* <div className="pt-4">
-                <p className="font-display text-xs uppercase tracking-widest text-concrete/50 mb-4">
-                  En dehors du code
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    'Pompier volontaire',
-                    'Batterie',
-                    'Cuisine',
-                    'Sport',
-                  ].map((interest) => (
-                    <span
-                      key={interest}
-                      className="px-4 py-2 bg-midnight border-2 border-concrete/20 text-concrete/70 font-display text-sm uppercase tracking-wide"
-                    >
-                      {interest}
-                    </span>
-                  ))}
-                </div>
+              {/* Points clés */}
+              <ul className="space-y-3 pt-2">
+                {[
+                  'Réalisation de projets end-to-end (front-end, back-end, déploiement)',
+                  'Mise en place de pipelines CI/CD (tests automatisés, qualité, monitoring)',
+                  'Approche centrée sur la performance, la maintenabilité et les bonnes pratiques',
+                ].map((point) => (
+                  <li key={point} className="flex items-start gap-3 text-concrete/75 text-base">
+                    <span className="text-electric text-lg mt-0.5 flex-shrink-0">▹</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="text-lg text-concrete/80 leading-relaxed">
+                Curieux et adaptable, je suis à l'aise pour monter rapidement
+                en compétence sur de nouvelles technologies et m'intégrer à
+                différents environnements techniques.
+              </p>
+
+              {/* Liens */}
+              <div className="flex flex-wrap gap-4 pt-2">
+                <motion.a
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.96 }}
+                  href="https://github.com/Mikadjx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 bg-electric text-midnight font-display font-bold uppercase text-xs tracking-wider border-2 border-electric hover:bg-transparent hover:text-electric transition-all"
+                >
+                  GitHub →
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.96 }}
+                  href="mailto:mickael.dijoux97@gmail.com"
+                  className="px-5 py-2.5 border-2 border-sunset text-sunset font-display font-bold uppercase text-xs tracking-wider hover:bg-sunset hover:text-midnight transition-all"
+                >
+                  mickael.dijoux97@gmail.com
+                </motion.a>
               </div>
-            </motion.div> */}
+            </motion.div>
 
-            {/* Stats + infos pratiques */}
+            {/* Stats + disponibilité */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -471,46 +478,40 @@ function App() {
                 ))}
               </div>
 
-              {/* Soft skills */}
-              {/* <div className="p-6 border-2 border-electric/30 bg-electric/5">
+              {/* Disponibilité */}
+              <div className="p-6 border-2 border-electric/30 bg-electric/5">
                 <p className="font-display text-xs uppercase tracking-widest text-electric mb-4">
-                  Soft skills
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    'Travail en équipe',
-                    'Organisation',
-                    'Curiosité',
-                    'Empathie',
-                    'Adaptabilité',
-                  ].map((s) => (
-                    <span
-                      key={s}
-                      className="px-3 py-1.5 bg-midnight border border-electric/20 text-concrete/70 text-sm font-body"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div> */}
-
-              {/* Mobilité */}
-              {/* <div className="p-6 border-2 border-sunset/30 bg-sunset/5">
-                <p className="font-display text-xs uppercase tracking-widest text-sunset mb-4">
-                  Disponibilité & mobilité
+                  Disponibilité
                 </p>
                 <ul className="space-y-2 text-concrete/70 text-sm font-body">
                   <li className="flex items-center gap-2">
-                    <span className="text-sunset">▹</span> CDI à partir d'octobre 2026
+                    <span className="text-electric">▹</span> Actuellement en fin d'études
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-sunset">▹</span> France, international, télétravail
+                    <span className="text-electric">▹</span> CDI à partir d'octobre 2026
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-sunset">▹</span> Permis B — Anglais basique
+                    <span className="text-electric">▹</span> France, international, télétravail
                   </li>
                 </ul>
-              </div> */}
+              </div>
+
+              {/* Centres d'intérêt */}
+              <div>
+                <p className="font-display text-xs uppercase tracking-widest text-concrete/50 mb-4">
+                  En dehors du code
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {['Pompier volontaire', 'Batterie', 'Cuisine', 'Sport'].map((interest) => (
+                    <span
+                      key={interest}
+                      className="px-4 py-2 bg-midnight border-2 border-concrete/20 text-concrete/70 font-display text-sm uppercase tracking-wide"
+                    >
+                      {interest}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
