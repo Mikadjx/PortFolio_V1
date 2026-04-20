@@ -73,7 +73,7 @@ function App() {
         "Application responsive de gestion de tournée de calendriers pour pompiers volontaires. Cartographie dynamique, suivi des dons et tableau de bord statistiques.",
       tech: ['ASP.NET MVC', 'C#', 'SQL Server', 'Procédures stockées'],
       color: 'bg-electric',
-      image: '/images/matices_ok.png',
+      image: '/images/logo_calendar.png',
       website: null,
       github: null,
       details: {
@@ -98,7 +98,7 @@ function App() {
         "Plateforme web complète pour groupe de rock. Vitrine publique, espace membres sécurisé, gestion multimédia, partage de partitions et outils de collaboration.",
       tech: ['ASP NET', 'C#', 'PostgreSQL', 'JavaScript'],
       color: 'bg-sunset',
-      image: '/images/matices-band.png',
+      image: '/images/matices_ok.png',
       website: 'https://matices45.fr/',
       github: null,
       details: {
