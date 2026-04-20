@@ -96,10 +96,10 @@ function App() {
       role: 'Développeur Full-Stack',
       description:
         "Plateforme web complète pour groupe de rock. Vitrine publique, espace membres sécurisé, gestion multimédia, partage de partitions et outils de collaboration.",
-      tech: ['Symfony', 'PHP', 'MySQL', 'JavaScript'],
+      tech: ['ASP NET', 'C#', 'PostgreSQL', 'JavaScript'],
       color: 'bg-sunset',
       image: '/images/matices-band.png',
-      website: 'https://matices-project.pages.dev/',
+      website: 'https://matices45.fr/',
       github: null,
       details: {
         context:
