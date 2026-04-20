@@ -430,6 +430,11 @@ function App() {
                 différents environnements techniques.
               </p>
 
+              <p className="text-base text-concrete/60 leading-relaxed border-l-4 border-sunset/40 pl-4">
+                Actuellement en fin d'études —{' '}
+                <span className="text-sunset font-semibold">disponible en CDI à partir d'octobre 2026</span>.
+              </p>
+
               {/* Liens */}
               <div className="flex flex-wrap gap-4 pt-2">
                 <motion.a
