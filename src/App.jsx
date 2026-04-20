@@ -73,7 +73,7 @@ function App() {
         "Application responsive de gestion de tournée de calendriers pour pompiers volontaires. Cartographie dynamique, suivi des dons et tableau de bord statistiques.",
       tech: ['ASP.NET MVC', 'C#', 'SQL Server', 'Procédures stockées'],
       color: 'bg-electric',
-      image: '/images/logo_calendar.png',
+      image: '/images/matices_ok.png',
       website: null,
       github: null,
       details: {
