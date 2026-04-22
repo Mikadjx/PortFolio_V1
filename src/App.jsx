@@ -71,7 +71,7 @@ function App() {
       role: 'Développeur Full-Stack',
       description:
         "Application responsive de gestion de tournée de calendriers pour pompiers volontaires. Cartographie dynamique, suivi des dons et tableau de bord statistiques.",
-      tech: ['ASP.NET MVC', 'C#', 'SQL Server', 'Procédures stockées'],
+      tech: ['Symfony', 'PHP', 'MySQL', 'phpMyAdmin'],
       color: 'bg-electric',
       image: '/images/logo_calendar.png',
       website: null,
@@ -87,7 +87,7 @@ function App() {
           "Espace administrateur (chef de centre & trésorier)",
           "Carte dynamique interactive des tournées",
           "Dashboard avec statistiques en temps réel",
-          "Architecture optimisée via procédures stockées",
+          "Architecture MVC avec Symfony et gestion via phpMyAdmin",
         ],
       },
     },
